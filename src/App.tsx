@@ -1,9 +1,15 @@
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './components/pages/Homepage';
+
+const App: React.FC = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-white">
-      <h1 className="text-4xl font-bold text-blue-600">Hello</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
